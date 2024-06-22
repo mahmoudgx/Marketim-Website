@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+html {
+    scroll-behavior: smooth;
+    background-color: #14141E;
+    color: white;
+}
+body {
+    font-family: "Rethink Sans", sans-serif;
+  
+}
+@tailwind utilities;
