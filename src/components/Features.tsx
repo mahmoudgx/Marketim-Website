@@ -15,7 +15,7 @@ const Features = () => {
   };
 
   return (
-    <div ref={sectionRef} className="mt-20 px-4 md:px-0">
+    <div className="mt-20 px-4 md:px-0">
       <motion.div
         initial="hidden"
         animate={sectionInView ? "visible" : "hidden"}
@@ -37,7 +37,6 @@ const Features = () => {
             custom={0.1}
             className="space-y-5 w-full md:w-[220%] border-2 p-5 rounded-lg"
           >
-            <img className="w-full h-auto" />
             <h1 className="text-xl font-semibold">
               ActiveCampaign vs. Total Sale
             </h1>
@@ -57,7 +56,6 @@ const Features = () => {
             custom={0.2}
             className="space-y-5 w-full border-2 p-5 rounded-lg"
           >
-            <img className="w-full h-auto" />
             <h1 className="text-xl font-semibold">Real-Time Insights</h1>
             <p>
               Gain instant access to real-time data insights and monitor key
@@ -73,10 +71,10 @@ const Features = () => {
             initial="hidden"
             animate={sectionInView ? "visible" : "hidden"}
             variants={itemVariants}
+            ref={sectionRef}
             custom={0.3}
             className="space-y-5 border-2 p-5 rounded-lg"
           >
-            <img className="w-full h-auto" />
             <h1 className="text-xl font-semibold">Audience Segmentation</h1>
             <p>
               Segment your audience based on demographics behavior and
@@ -96,7 +94,6 @@ const Features = () => {
               Optimize campaign for in real-time based on performance data and
               conduct A/B tests to refine messaging and creative elements.
             </p>
-            <img className="w-full h-auto" src="" />
           </motion.div>
           <motion.div
             initial="hidden"
@@ -105,7 +102,6 @@ const Features = () => {
             custom={0.5}
             className="space-y-5 border-2 p-5 rounded-lg"
           >
-            <img className="w-full h-auto" src="" />
             <h1 className="text-xl font-semibold">Multi-Channel Attribution</h1>
             <p>
               Gain a holistic view of your marketing efforts across channels.

@@ -1,17 +1,42 @@
 import { FaPlay } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Testimonials = () => {
+  const sectionRef = useRef(null);
+  const sectionInView = useInView(sectionRef, { once: true });
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (delay = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay },
+    }),
+  };
+
   return (
     <div className="mt-20 mb-20 px-4">
-      <div className="flex flex-col mb-20 text-center space-y-5">
+      <motion.div
+        initial="hidden"
+        animate={sectionInView ? "visible" : "hidden"}
+        variants={itemVariants}
+        className="flex flex-col mb-20 text-center space-y-5"
+      >
         <h1 className="text-[#53B7ED]">Testimonials</h1>
         <p className="text-2xl md:text-4xl font-semibold">
           Many Companies Believe in <br className="hidden md:block" /> Marketim
         </p>
-      </div>
+      </motion.div>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
-          <div className="space-y-5 border-2 rounded-lg p-5">
+          <motion.div
+            initial="hidden"
+            animate={sectionInView ? "visible" : "hidden"}
+            variants={itemVariants}
+            custom={0.1}
+            className="space-y-5 border-2 rounded-lg p-5"
+          >
             <img
               width={50}
               src="https://www.svgrepo.com/show/416519/medium-logo.svg"
@@ -26,8 +51,14 @@ const Testimonials = () => {
             <div className="bg-white rounded-full inline-block p-2 items-center text-blue-500">
               <FaPlay />
             </div>
-          </div>
-          <div className="space-y-5 border-2 rounded-lg p-5">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate={sectionInView ? "visible" : "hidden"}
+            variants={itemVariants}
+            custom={0.2}
+            className="space-y-5 border-2 rounded-lg p-5"
+          >
             <img
               width={50}
               src="https://www.svgrepo.com/show/400860/tridentemblem.svg"
@@ -42,8 +73,15 @@ const Testimonials = () => {
             <div className="bg-white rounded-full inline-block p-2 items-center text-blue-500">
               <FaPlay />
             </div>
-          </div>
-          <div className="space-y-5 border-2 rounded-lg p-5">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate={sectionInView ? "visible" : "hidden"}
+            variants={itemVariants}
+            custom={0.3}
+            ref={sectionRef}
+            className="space-y-5 border-2 rounded-lg p-5"
+          >
             <img
               width={50}
               src="https://www.svgrepo.com/show/303558/yammer-1-logo.svg"
@@ -58,12 +96,18 @@ const Testimonials = () => {
             <div className="bg-white rounded-full inline-block p-2 items-center text-blue-500">
               <FaPlay />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="flex justify-center mt-5">
         <div className="flex flex-col md:flex-row gap-5 max-w-6xl mx-auto">
-          <div className="space-y-5 border-2 rounded-lg p-5">
+          <motion.div
+            initial="hidden"
+            animate={sectionInView ? "visible" : "hidden"}
+            variants={itemVariants}
+            custom={0.4}
+            className="space-y-5 border-2 rounded-lg p-5"
+          >
             <img
               width={50}
               src="https://www.svgrepo.com/show/303440/gulp-logo.svg"
@@ -79,8 +123,14 @@ const Testimonials = () => {
             <div className="bg-white rounded-full inline-block p-2 items-center text-blue-500">
               <FaPlay />
             </div>
-          </div>
-          <div className="space-y-5 border-2 md:w-[365%] rounded-lg p-5 md:bg-[url('D:/Projects/Marketim/src/assets/person.png')] overflow-hidden bg-contain bg-right bg-no-repeat">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate={sectionInView ? "visible" : "hidden"}
+            variants={itemVariants}
+            custom={0.5}
+            className="space-y-5 border-2 md:w-[365%] rounded-lg p-5 md:bg-[url('D:/Projects/Marketim/src/assets/person.png')] overflow-hidden bg-contain bg-right bg-no-repeat"
+          >
             <div className="space-y-5 md:w-[50%]">
               <img
                 width={50}
@@ -97,7 +147,7 @@ const Testimonials = () => {
                 <h1 className="text-sm font-semibold">Founder of Trance</h1>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
