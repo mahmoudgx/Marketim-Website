@@ -9,7 +9,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex md:justify-evenly md:mx-auto md:max-w-6xl justify-between items-center py-10 px-5 md:px-10">
+    <nav className="flex md:justify-evenly md:mx-auto md:max-w-6xl justify-between items-center md:pt-10 md:pb-10 pt-10 pb-5 px-5 md:px-10">
       <div>
         <h1 className="uppercase text-xl font-bold">Marketim</h1>
       </div>
@@ -42,36 +42,41 @@ const NavBar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="absolute top-0 list-none left-0 w-full h-full bg-black flex flex-col items-center justify-center space-y-5 z-10">
-          <a href="#">
+        <div className="fixed top-0 left-0 w-64  list-none h-screen bg-black flex flex-col items-start justify-start space-y-5 p-5 z-10">
+          <button className="self-end mb-5" onClick={toggleMenu}>
+            <FaTimes size={24} />
+          </button>
+          <a href="#" className="w-full">
             <li className="text-xl" onClick={toggleMenu}>
               Home
             </li>
           </a>
-          <a href="#">
+          <a href="#" className="w-full">
             <li className="text-xl" onClick={toggleMenu}>
               About us
             </li>
           </a>
-          <a href="#">
+          <a href="#" className="w-full">
             <li className="text-xl" onClick={toggleMenu}>
               Download
             </li>
           </a>
-          <a href="#">
+          <a href="#" className="w-full">
             <li className="text-xl" onClick={toggleMenu}>
               Features
             </li>
           </a>
-          <a href="#">
+          <a href="#" className="w-full">
             <li className="text-xl" onClick={toggleMenu}>
               Pricing
             </li>
           </a>
-          <div className="flex flex-col items-center space-y-4">
-            <button onClick={toggleMenu}>Log in</button>
+          <div className="flex flex-col items-center space-y-4 w-full">
+            <button onClick={toggleMenu} className="w-full">
+              Log in
+            </button>
             <button
-              className="border-2 border-gray-400 rounded-md py-2 px-5"
+              className="border-2 border-gray-400 rounded-md py-2 px-5 w-full"
               onClick={toggleMenu}
             >
               Register

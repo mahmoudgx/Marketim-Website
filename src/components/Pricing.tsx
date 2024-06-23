@@ -1,4 +1,73 @@
 const Pricing = () => {
+  const plans = [
+    {
+      name: "Starter",
+      price: "Free",
+      description: "startups and small businesses",
+      buttonBg: "#5356EC",
+      buttonText: "Choose Now",
+      bgColor: "#14141E",
+      features: [
+        { name: "real-time insights", accepted: true },
+        { name: "Customizable dashboards", accepted: true },
+        { name: "multi channel attribution", accepted: true },
+        { name: "predictive analytics", accepted: false },
+        { name: "audience segmentation", accepted: false },
+        { name: "campaign optimization", accepted: false },
+        { name: "intelligent recommendations", accepted: false },
+        { name: "collaboration tools", accepted: false },
+        { name: "dedicated support", accepted: false },
+        { name: "custom pricing option", accepted: false },
+        { name: "no-risk trial period", accepted: true },
+        { name: "scalable pricing", accepted: true },
+      ],
+    },
+    {
+      name: "Pro",
+      price: "$99/month",
+      description: "growing business and marketing teams",
+      buttonBg: "#ffffff",
+      buttonText: "Choose Now",
+      bgColor: "#5356EC",
+      features: [
+        { name: "real-time insights", accepted: true },
+        { name: "Customizable dashboards", accepted: true },
+        { name: "multi channel attribution", accepted: true },
+        { name: "predictive analytics", accepted: true },
+        { name: "audience segmentation", accepted: true },
+        { name: "campaign optimization", accepted: true },
+        { name: "intelligent recommendations", accepted: false },
+        { name: "collaboration tools", accepted: false },
+        { name: "dedicated support", accepted: false },
+        { name: "custom pricing option", accepted: false },
+        { name: "no-risk trial period", accepted: true },
+        { name: "scalable pricing", accepted: true },
+      ],
+    },
+    {
+      name: "Enterprise",
+      price: "Custom Pricing",
+      description: "large enterprise organizations",
+      buttonBg: "#5356EC",
+      buttonText: "Choose Now",
+      bgColor: "#14141E",
+      features: [
+        { name: "real-time insights", accepted: true },
+        { name: "Customizable dashboards", accepted: true },
+        { name: "multi channel attribution", accepted: true },
+        { name: "predictive analytics", accepted: true },
+        { name: "audience segmentation", accepted: true },
+        { name: "campaign optimization", accepted: true },
+        { name: "intelligent recommendations", accepted: true },
+        { name: "collaboration tools", accepted: true },
+        { name: "dedicated support", accepted: true },
+        { name: "custom pricing option", accepted: true },
+        { name: "no-risk trial period", accepted: true },
+        { name: "scalable pricing", accepted: true },
+      ],
+    },
+  ];
+
   return (
     <div className="mt-20 px-4">
       <div className="flex flex-col mb-20 text-center space-y-5">
@@ -9,116 +78,43 @@ const Pricing = () => {
         </p>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 mt-10 md:mt-20 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
-            <div className="border-2 bg-[#14141E] space-y-5 rounded-lg p-7">
-              <h1 className="text-2xl font-semibold">Starter</h1>
-              <h1 className="text-4xl font-bold">Free</h1>
-              <p>startups and small businesses</p>
-              <button className="bg-[#5356EC] py-2 w-full rounded-lg font-semibold">
-                Choose Now
-              </button>
-              <div className="flex flex-col items-center space-y-5">
-                {[
-                  "real-time insights",
-                  "Customizable dashboards",
-                  "multi channel attribution",
-                  "predictive analytics",
-                  "audience segmentation",
-                  "campaign optimization",
-                  "intelligent recommendations",
-                  "collaboration tools",
-                  "dedicated support",
-                  "custom pricing option",
-                  "no-risk trial period",
-                  "scalable pricing",
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <img
-                      width={20}
-                      src={`https://www.svgrepo.com/show/${
-                        feature.includes("mark")
-                          ? "401366/cross-mark-button"
-                          : "384403/accept-check-good-mark-ok-tick"
-                      }.svg`}
-                    />
-                    <h1>{feature}</h1>
-                  </div>
-                ))}
+            {plans.map((plan, index) => (
+              <div
+                key={index}
+                className={`border-2 space-y-5 rounded-lg p-7 ${
+                  plan.bgColor === "#5356EC" ? "bg-[#5356EC]" : "bg-[#14141E]"
+                }`}
+              >
+                <h1 className="text-2xl font-semibold">{plan.name}</h1>
+                <h1 className="text-4xl font-bold">{plan.price}</h1>
+                <p>{plan.description}</p>
+                <button
+                  className={`py-2 w-full rounded-lg font-semibold ${
+                    plan.bgColor === "#5356EC"
+                      ? "bg-white text-black"
+                      : "bg-[#5356EC] text-white"
+                  }`}
+                >
+                  {plan.buttonText}
+                </button>
+                <div className="flex flex-col items-center space-y-5">
+                  {plan.features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <img
+                        width={20}
+                        src={`https://www.svgrepo.com/show/${
+                          feature.accepted
+                            ? "384403/accept-check-good-mark-ok-tick"
+                            : "401366/cross-mark-button"
+                        }.svg`}
+                        alt={feature.accepted ? "Accepted" : "Not accepted"}
+                      />
+                      <h1>{feature.name}</h1>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="bg-[#5356EC] space-y-5 rounded-lg p-7">
-              <h1 className="text-2xl font-semibold">Pro</h1>
-              <h1 className="text-4xl font-bold">
-                $99<span className="text-sm">/month</span>
-              </h1>
-              <p>growing business and marketing teams</p>
-              <button className="bg-white text-black py-2 w-full rounded-lg font-semibold">
-                Choose Now
-              </button>
-              <div className="flex flex-col items-center space-y-5">
-                {[
-                  "real-time insights",
-                  "Customizable dashboards",
-                  "multi channel attribution",
-                  "predictive analytics",
-                  "audience segmentation",
-                  "campaign optimization",
-                  "intelligent recommendations",
-                  "collaboration tools",
-                  "dedicated support",
-                  "custom pricing option",
-                  "no-risk trial period",
-                  "scalable pricing",
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <img
-                      width={20}
-                      src={`https://www.svgrepo.com/show/${
-                        feature.includes("mark")
-                          ? "401366/cross-mark-button"
-                          : "384403/accept-check-good-mark-ok-tick"
-                      }.svg`}
-                    />
-                    <h1>{feature}</h1>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="border-2 bg-[#14141E] space-y-5 rounded-lg p-7">
-              <h1 className="text-2xl font-semibold">Enterprise</h1>
-              <h1 className="text-4xl font-bold">Custom Pricing</h1>
-              <p>large enterprise organizations</p>
-              <button className="bg-[#5356EC] py-2 w-full rounded-lg font-semibold">
-                Choose Now
-              </button>
-              <div className="flex flex-col items-center space-y-5">
-                {[
-                  "real-time insights",
-                  "Customizable dashboards",
-                  "multi channel attribution",
-                  "predictive analytics",
-                  "audience segmentation",
-                  "campaign optimization",
-                  "intelligent recommendations",
-                  "collaboration tools",
-                  "dedicated support",
-                  "custom pricing option",
-                  "no-risk trial period",
-                  "scalable pricing",
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <img
-                      width={20}
-                      src={`https://www.svgrepo.com/show/${
-                        feature.includes("mark")
-                          ? "401366/cross-mark-button"
-                          : "384403/accept-check-good-mark-ok-tick"
-                      }.svg`}
-                    />
-                    <h1>{feature}</h1>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
