@@ -1,143 +1,165 @@
 const Work = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 px-5 md:px-0">
       <div className="flex flex-col mb-20 text-center space-y-5">
-        <h1 className="text-[#53B7ED]">How It Work</h1>
+        <h1 className="text-[#53B7ED]">How It Works</h1>
         <p className="text-4xl font-semibold">
-          How Marketim Works<br></br> for You
+          How Marketim Works
+          <br /> for You
         </p>
-        <div className="grid grid-row-2 gap-5">
-          <div className="grid grid-cols-3 gap-5">
-            <div className="border-2 w-[70%] rounded-lg space-y-5 p-5">
-              <div className="flex justify-between items-center">
-                <h1 className="flex flex-col text-2xl  font-semibold">
-                  01 <span className="text-xl">Step</span>
-                </h1>
-                <img
-                  width={50}
-                  src="https://www.svgrepo.com/show/362160/sign-up.svg"
-                />
-              </div>
-              <div className="text-left">
-                <ul className="mb-2">Sign Up</ul>
-                <li className="text-sm ml-2">
-                  begin your journey by signing up for marketim.
-                </li>
-                <li className="text-sm ml-2">
-                  provide your email address and create a password to get
+      </div>
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          <div className="border-2 rounded-lg space-y-5 p-5">
+            <div className="flex justify-between items-center">
+              <h1 className="flex flex-col text-2xl font-semibold">
+                01 <span className="text-xl">Step</span>
+              </h1>
+              <img
+                className="w-12 h-12"
+                src="https://www.svgrepo.com/show/362160/sign-up.svg"
+                alt="Sign Up"
+              />
+            </div>
+            <div className="text-left">
+              <h2 className="mb-2 text-lg font-semibold">Sign Up</h2>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Begin your journey by signing up for Marketim.</li>
+                <li>
+                  Provide your email address and create a password to get
                   started.
                 </li>
-              </div>
-            </div>
-            <div className="border-2 w-[70%] rounded-lg space-y-5 p-5">
-              <div className="flex justify-between items-center">
-                <h1 className="flex flex-col text-2xl  font-semibold">
-                  02 <span className="text-xl">Step</span>
-                </h1>
-                <img
-                  width={50}
-                  src="https://www.svgrepo.com/show/29508/apps.svg"
-                />
-              </div>
-              <div className="text-left">
-                <ul className="mb-2">Customize Your Dashboard</ul>
-                <li className="text-sm ml-2">
-                  tailor your dashboard to your specific needs and preferences
-                </li>
-                <li className="text-sm ml-2">
-                  arrange widgets visualization options, and workspace
-                </li>
-              </div>
-            </div>
-            <div className="border-2 w-[70%] rounded-lg space-y-5 p-5">
-              <div className="flex justify-between items-center">
-                <h1 className="flex flex-col text-2xl  font-semibold">
-                  03 <span className="text-xl">Step</span>
-                </h1>
-                <img
-                  width={50}
-                  src="https://www.svgrepo.com/show/506956/cld-cloud-wifi.svg"
-                />
-              </div>
-              <div className="text-left">
-                <ul className="mb-2">Connect Your Data Sources</ul>
-                <li className="text-sm ml-2">
-                  seamlessly integrate your data sources with marketim
-                </li>
-                <li className="text-sm ml-2">
-                  connect platforms like google analytics, facebook ads and more
-                  with just a few clicks
-                </li>
-              </div>
+              </ul>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-5">
-            <div className="border-2 w-[70%] rounded-lg space-y-5 p-5">
-              <div className="flex justify-between items-center">
-                <h1 className="flex flex-col text-2xl  font-semibold">
-                  04 <span className="text-xl">Step</span>
-                </h1>
-                <img
-                  width={50}
-                  src="https://www.svgrepo.com/show/345315/graph-chart-data-analytics-statistic-report-analysis.svg"
-                />
-              </div>
-              <div className="text-left">
-                <ul className="mb-2">explore insights and analytics</ul>
-                <li className="text-sm ml-2">
-                  dive into your insights and analytics to uncover valuable
-                  information
-                </li>
-                <li className="text-sm ml-2">
-                  track key metrics, monitor campaign performance insights
-                </li>
-              </div>
+          <div className="border-2 rounded-lg space-y-5 p-5">
+            <div className="flex justify-between items-center">
+              <h1 className="flex flex-col text-2xl font-semibold">
+                02 <span className="text-xl">Step</span>
+              </h1>
+              <img
+                className="w-12 h-12"
+                src="https://www.svgrepo.com/show/29508/apps.svg"
+                alt="Customize Your Dashboard"
+              />
             </div>
-            <div className="border-2 w-[70%] rounded-lg space-y-5 p-5">
-              <div className="flex justify-between items-center">
-                <h1 className="flex flex-col text-2xl  font-semibold">
-                  05 <span className="text-xl">Step</span>
-                </h1>
-                <img
-                  width={50}
-                  src="https://www.svgrepo.com/show/428744/marketing-promotion-communication.svg"
-                />
-              </div>
-              <div className="text-left">
-                <ul className="mb-2">optimize your marketing strategy</ul>
-                <li className="text-sm ml-2">
-                  identify opportunities for improvement and optimization
+            <div className="text-left">
+              <h2 className="mb-2 text-lg font-semibold">
+                Customize Your Dashboard
+              </h2>
+              <ul className="list-disc list-inside space-y-1">
+                <li>
+                  Tailor your dashboard to your specific needs and preferences.
                 </li>
-                <li className="text-sm ml-2">
-                  fine-tune your campaigns to maximum your return on investment
-                </li>
-              </div>
+                <li>Arrange widgets, visualization options, and workspace.</li>
+              </ul>
             </div>
-            <div className="border-2 w-[70%] rounded-lg space-y-5 p-5">
-              <div className="flex justify-between items-center">
-                <h1 className="flex flex-col text-2xl  font-semibold">
-                  06 <span className="text-xl">Step</span>
-                </h1>
-                <img
-                  width={50}
-                  src="https://www.svgrepo.com/show/489955/star-favorite.svg"
-                />
-              </div>
-              <div className="text-left">
-                <ul className="mb-2">measure your success</ul>
-                <li className="text-sm ml-2">
-                  track your progress over time with comprehensive reporting
+          </div>
+          <div className="border-2 rounded-lg space-y-5 p-5">
+            <div className="flex justify-between items-center">
+              <h1 className="flex flex-col text-2xl font-semibold">
+                03 <span className="text-xl">Step</span>
+              </h1>
+              <img
+                className="w-12 h-12"
+                src="https://www.svgrepo.com/show/506956/cld-cloud-wifi.svg"
+                alt="Connect Your Data Sources"
+              />
+            </div>
+            <div className="text-left">
+              <h2 className="mb-2 text-lg font-semibold">
+                Connect Your Data Sources
+              </h2>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Seamlessly integrate your data sources with Marketim.</li>
+                <li>
+                  Connect platforms like Google Analytics, Facebook Ads, and
+                  more with just a few clicks.
                 </li>
-                <li className="text-sm ml-2">
-                  analyze trends measure your success and your success
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          <div className="border-2 rounded-lg space-y-5 p-5">
+            <div className="flex justify-between items-center">
+              <h1 className="flex flex-col text-2xl font-semibold">
+                04 <span className="text-xl">Step</span>
+              </h1>
+              <img
+                className="w-12 h-12"
+                src="https://www.svgrepo.com/show/345315/graph-chart-data-analytics-statistic-report-analysis.svg"
+                alt="Explore Insights and Analytics"
+              />
+            </div>
+            <div className="text-left">
+              <h2 className="mb-2 text-lg font-semibold">
+                Explore Insights and Analytics
+              </h2>
+              <ul className="list-disc list-inside space-y-1">
+                <li>
+                  Dive into your insights and analytics to uncover valuable
+                  information.
                 </li>
-              </div>
+                <li>Track key metrics and monitor campaign performance.</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-2 rounded-lg space-y-5 p-5">
+            <div className="flex justify-between items-center">
+              <h1 className="flex flex-col text-2xl font-semibold">
+                05 <span className="text-xl">Step</span>
+              </h1>
+              <img
+                className="w-12 h-12"
+                src="https://www.svgrepo.com/show/428744/marketing-promotion-communication.svg"
+                alt="Optimize Your Marketing Strategy"
+              />
+            </div>
+            <div className="text-left">
+              <h2 className="mb-2 text-lg font-semibold">
+                Optimize Your Marketing Strategy
+              </h2>
+              <ul className="list-disc list-inside space-y-1">
+                <li>
+                  Identify opportunities for improvement and optimization.
+                </li>
+                <li>
+                  Fine-tune your campaigns to maximize your return on
+                  investment.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-2 rounded-lg space-y-5 p-5">
+            <div className="flex justify-between items-center">
+              <h1 className="flex flex-col text-2xl font-semibold">
+                06 <span className="text-xl">Step</span>
+              </h1>
+              <img
+                className="w-12 h-12"
+                src="https://www.svgrepo.com/show/489955/star-favorite.svg"
+                alt="Measure Your Success"
+              />
+            </div>
+            <div className="text-left">
+              <h2 className="mb-2 text-lg font-semibold">
+                Measure Your Success
+              </h2>
+              <ul className="list-disc list-inside space-y-1">
+                <li>
+                  Track your progress over time with comprehensive reporting.
+                </li>
+                <li>Analyze trends and measure your success.</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
       <div className="flex justify-center mt-10">
-        <button className="bg-[#5356EC] px-7 font-semibold py-3 rounded-lg">
+        <button className="bg-[#5356EC] text-white px-7 font-semibold py-3 rounded-lg">
           View All
         </button>
       </div>
